@@ -1,13 +1,13 @@
 import React from 'react';
 import TodoItem from './TodoItem'
 
-const Todos = ({tasks}) => {
+const Todos = ({tasks, deleteTodo}) => {
 
     const todoList = tasks.length ? (
         tasks.map(task =>{
             return(
 
-                <TodoItem task={task.task} title={task.title} key={task.id}/>
+                <TodoItem task={task.task} title={task.title} id={task.id} key={task.id} deleteTodo={deleteTodo}/>
             )
         })
     ) : (

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Todos from './components/TodoList'
+import AddTodo from './components/AddTodo'
 
 class App extends Component {
   
@@ -26,11 +27,22 @@ class App extends Component {
     ]
   }
 
+  deleteTodo = (id) =>{
+    const tasks = this.state.tasks.filter(task =>{
+      return task.id !== id
+    })
+
+    this.setState({
+      tasks
+    })
+  }
+
   render() {
       return (
-        <div className="App">
-
-          <Todos tasks={this.state.tasks} />
+        <div className="App container">
+          <AddTodo />
+          <Todos tasks={this.state.tasks} deleteTodo={this.deleteTodo}/>
+          
         </div>
       );
     }

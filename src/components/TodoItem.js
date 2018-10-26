@@ -1,9 +1,10 @@
 import React from 'react';
 
-const TodoItem = ({task, title}) => {
+const TodoItem = ({task, title, id, deleteTodo}) => {
 
 
     return (
+        
         <div className="row">
             <div className="">
             <div className="card blue-grey darken-1">
@@ -12,8 +13,7 @@ const TodoItem = ({task, title}) => {
                 <p>{task}</p>
                 </div>
                 <div className="card-action">
-                    <button>Hello</button>
-                    <button>Bye</button>
+                    <button onClick={()=>{deleteTodo(id)}}>Delete</button>
                 </div>
             </div>
             </div>
