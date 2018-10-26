@@ -13,7 +13,7 @@ const TodoItem = ({task, title, id, deleteTodo}) => {
                 <p>{task}</p>
                 </div>
                 <div className="card-action">
-                    <button onClick={()=>{deleteTodo(id)}}>Delete</button>
+                    <button className="btn red" onClick={()=>{deleteTodo(id)}}>Delete</button>
                 </div>
             </div>
             </div>

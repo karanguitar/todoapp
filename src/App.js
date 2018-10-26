@@ -37,10 +37,19 @@ class App extends Component {
     })
   }
 
+  addTodo = (task) =>{
+    task.id = Math.random()
+    let tasks = [...this.state.tasks, task]
+
+    this.setState({
+      tasks
+    })
+  }
+
   render() {
       return (
         <div className="App container">
-          <AddTodo />
+          <AddTodo addTodo={this.addTodo}/>
           <Todos tasks={this.state.tasks} deleteTodo={this.deleteTodo}/>
           
         </div>
