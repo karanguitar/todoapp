@@ -27,16 +27,16 @@ class AddTodo extends Component {
             <div>
                 <h1 className="center">New Task</h1>
 
-                <div class="row">
-                    <form onSubmit={this.handleSubmit} class="col s12">
-                    <div class="row">
-                        <div class="input-field col s12">
-                        <textarea value={this.state.title} id="title" class="materialize-textarea" onChange={this.handleChange}></textarea>
-                        <label for="textarea1">Title</label>
+                <div className="row">
+                    <form onSubmit={this.handleSubmit} className="col s12">
+                    <div className="row">
+                        <div className="input-field col s12">
+                        <textarea value={this.state.title} id="title" className="materialize-textarea" onChange={this.handleChange}></textarea>
+                        <label htmlFor="textarea1">Title</label>
                         </div>
-                        <div class="input-field col s12">
-                        <textarea value={this.state.task} id="task" class="materialize-textarea" onChange={this.handleChange}></textarea>
-                        <label for="textarea1">Task</label>
+                        <div className="input-field col s12">
+                        <textarea value={this.state.task} id="task" className="materialize-textarea" onChange={this.handleChange}></textarea>
+                        <label htmlFor="textarea1">Task</label>
                         </div>
                     </div>
                     </form>

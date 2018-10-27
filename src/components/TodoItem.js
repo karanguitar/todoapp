@@ -1,4 +1,5 @@
 import React from 'react';
+import Reveal from 'react-reveal/Reveal';
 
 const TodoItem = ({task, title, id, deleteTodo}) => {
 

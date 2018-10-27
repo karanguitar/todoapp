@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Todos from './components/TodoList'
 import AddTodo from './components/AddTodo'
+import './style/style.css'
 
 class App extends Component {
   
@@ -51,7 +52,7 @@ class App extends Component {
         <div className="App container">
           <AddTodo addTodo={this.addTodo}/>
           <Todos tasks={this.state.tasks} deleteTodo={this.deleteTodo}/>
-          
+ 
         </div>
       );
     }
